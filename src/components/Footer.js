@@ -40,7 +40,7 @@ const Footer = () => {
           <SocialGroup>
             <span>Dra. Maleh</span>
             <SocialLinks>
-              <a href="https://dradanielamaleh.com.ar" target="_blank" rel="noreferrer" title="Sitio web"><FaGlobe /></a>
+              <a href="https://danielamaleh.com/" target="_blank" rel="noreferrer" title="Sitio web"><FaGlobe /></a>
               <a href="https://www.facebook.com/dradanielamaleh" target="_blank" rel="noreferrer"><FaFacebook /></a>
               <a href="https://www.instagram.com/dradanielamaleh" target="_blank" rel="noreferrer"><FaInstagram /></a>
             </SocialLinks>
