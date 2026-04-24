@@ -192,6 +192,11 @@ function App() {
         <section id="commitment" className="section section-4">
           <div className="section-content">
             <h1>Compromiso con la Calidad</h1>
+            <div className="team-header-divider" aria-hidden="true">
+              <span className="team-header-divider-line team-header-divider-line--left" />
+              <span className="team-header-divider-dot" />
+              <span className="team-header-divider-line team-header-divider-line--right" />
+            </div>
             <p>En Due Derma nos comprometemos a:</p>
             <ul className="commitment-list">
               <li>
