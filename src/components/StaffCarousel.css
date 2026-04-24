@@ -1,50 +1,37 @@
-/* Carrusel del Staff Médico */
+/* Carrusel equipo — mismo lenguaje visual que desktop (fondo celeste en section-3) */
 .staff-carousel {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   color-scheme: light;
-  background: transparent !important;
-  background-color: transparent !important;
 }
 
-.staff-carousel * {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-.staff-carousel *::before,
-.staff-carousel *::after {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Excepción: los dots deben tener color */
-.staff-carousel .carousel-dots,
-.staff-carousel .dot {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-.staff-carousel .dot {
-  background-color: #f9f8f7 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.staff-carousel .dot.active {
-  background-color: #0c0c0c !important;
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 600;
+.staff-carousel-header {
   text-align: center;
-  margin-bottom: 0.5rem;
-  color: #0c0c0c;
+  padding: 0 0.75rem;
+}
+
+.staff-carousel-header .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.75rem, 5vw, 2.1rem);
+  font-weight: 600;
+  color: #1a2332;
+  margin: 0 0 0.65rem;
+}
+
+.staff-carousel-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  color: #566583;
+  margin: 0;
+  text-align: center;
+}
+
+.staff-carousel-header .team-header-divider {
+  width: min(380px, 85vw);
+  margin-bottom: 0.85rem;
 }
 
 .carousel-container {
@@ -54,329 +41,226 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  gap: 10px;
+  gap: 8px;
   box-sizing: border-box;
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-.carousel-container::before,
-.carousel-container::after {
-  display: none !important;
-  content: none !important;
-  background: transparent !important;
 }
 
 .carousel-wrapper {
-  flex: 0 0 280px;
-  width: 280px;
-  max-width: 280px;
+  flex: 0 0 min(92vw, 320px);
+  width: min(92vw, 320px);
+  max-width: 320px;
   overflow: hidden;
   position: relative;
   border-radius: 0;
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
   box-sizing: border-box;
-}
-
-.carousel-wrapper::before,
-.carousel-wrapper::after {
-  display: none !important;
-  content: none !important;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 400%; /* 4 slides = 400% del contenedor wrapper */
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
-}
-
-.carousel-track::before,
-.carousel-track::after {
-  display: none !important;
-  content: none !important;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
+  transition: transform 0.45s ease-in-out;
+  width: 400%;
 }
 
 .carousel-slide {
-  width: 25%; /* Cada slide es 25% del track = 100% del contenedor wrapper */
+  width: 25%;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0;
+  align-items: stretch;
+  padding: 0 6px;
   box-sizing: border-box;
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
 }
 
 .carousel-slide .doctor-card {
-  margin: 0 10px;
-}
-
-.carousel-slide::before,
-.carousel-slide::after {
-  display: none !important;
-  content: none !important;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-}
-
-/* Excepción: las cards SÍ deben tener fondo blanco */
-.carousel-slide .doctor-card {
-  background-color: #ffffff !important;
-  border: none !important;
-  outline: none !important;
+  margin: 0;
+  width: 100%;
 }
 
 .carousel-btn {
-  background: none !important;
-  background-color: transparent !important;
-  color: #0c0c0c !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #5E6F8E;
+  border: 1px solid rgba(94, 111, 142, 0.25);
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
   flex-shrink: 0;
-  border-radius: 0 !important;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 0;
-}
-
-.carousel-btn::before,
-.carousel-btn::after {
-  display: none !important;
-  content: none !important;
+  font-size: 1rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(61, 90, 120, 0.12);
 }
 
 .carousel-btn:hover,
-.carousel-btn:focus,
-.carousel-btn:active {
-  color: #9299a1 !important;
-  background: none !important;
-  background-color: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transform: scale(1.1);
-}
-
-.carousel-btn i {
-  color: inherit !important;
+.carousel-btn:focus-visible {
+  background: #5E6F8E;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .carousel-dots {
-  display: flex !important;
-  gap: 0.5rem;
+  display: flex;
+  gap: 0.45rem;
   justify-content: center;
-  margin-top: 1rem;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 10;
+  margin-top: 0.25rem;
 }
 
 .dot {
-  width: 12px !important;
-  height: 12px !important;
-  border-radius: 50% !important;
-  border: none !important;
-  background-color: #f9f8f7 !important;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(86, 101, 131, 0.45);
   cursor: pointer;
-  transition: all 0.3s ease;
-  visibility: visible !important;
-  opacity: 1 !important;
-  display: block !important;
+  transition: transform 0.2s ease, background 0.2s ease;
+  padding: 0;
 }
 
 .dot.active {
-  background-color: #0c0c0c !important;
-  transform: scale(1.2);
+  background: #566583;
+  transform: scale(1.25);
 }
 
-.dot:hover {
-  background-color: #f9f8f7 !important;
-}
-
-.dot.active:hover {
-  background-color: #0c0c0c !important;
-}
-
-/* Estilos para las cards del doctor - Igual que desktop */
+/* Tarjeta slide */
 .doctor-card {
-  background-color: #ffffff !important;
-  color-scheme: light;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
-  display: flex !important;
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem 1.15rem 1.35rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  min-height: 450px;
-  opacity: 1;
-  visibility: visible;
+  box-shadow: 0 8px 28px rgba(61, 90, 120, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  min-height: 0;
   box-sizing: border-box;
-  border: none !important;
-  outline: none !important;
-  justify-content: flex-start;
-  gap: 0;
-}
-
-.doctor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .doctor-card.director-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
-  border: none !important;
-  box-shadow: 0 6px 20px rgba(188, 206, 237, 0.3);
-  padding: 2rem 1.5rem;
-  max-width: 280px;
-  min-height: 450px !important;
-}
-
-.doctor-card.director-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(188, 206, 237, 0.4);
+  padding-top: 1.35rem;
 }
 
 .doctor-image {
-  width: 180px;
-  height: 180px;
+  width: 132px;
+  height: 132px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-  flex-shrink: 0;
+  background: #e8eef5;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.doctor-image.director-image {
-  width: 190px;
-  height: 190px;
-  border: none;
-  box-shadow: 0 4px 10px rgba(188, 206, 237, 0.3);
-  margin-bottom: 1.5rem;
+.doctor-image.doctor-image--director-arch {
+  width: auto;
+  height: auto;
+  max-width: none;
+  min-height: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+  margin-bottom: 1rem;
+  padding: 0 0 0 48px;
+  box-sizing: border-box;
 }
 
-.doctor-image img {
+.doctor-image.doctor-image--director-arch .director-frame--carousel {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctor-image:not(.doctor-image--director-arch) img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-}
-
-.doctor-image.director-image img {
   object-position: center top;
-}
-
-.placeholder-image {
-  color: #666;
-  font-size: 0.9rem;
-  font-weight: 500;
+  display: block;
 }
 
 .doctor-info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.2rem;
   width: 100%;
-  min-height: 100px;
-  justify-content: flex-start;
-  margin-top: 0;
-  flex: 1;
 }
 
 .doctor-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #0c0c0c;
+  color: #1a1a1a;
   margin: 0;
-  line-height: 1.3;
-}
-
-.doctor-card.director-card .doctor-name {
-  font-size: 1.3rem;
-  margin-bottom: 0;
+  line-height: 1.25;
 }
 
 .doctor-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #0c0c0c;
-  margin: 0;
-  opacity: 0.8;
-  height: 1.3rem;
-  min-height: 1.3rem;
-  max-height: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #566583;
+  margin: 0.15rem 0 0.35rem;
+  min-height: 0;
+  height: auto;
+  max-height: none;
 }
 
-.doctor-card.director-card .doctor-title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #5E6F8E;
-  margin: 0;
-  opacity: 0.8;
-  height: 1.3rem;
-  min-height: 1.3rem;
-  max-height: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.3rem;
+.doctor-divider {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #566583;
+  margin: 0.15rem 0 0.45rem;
 }
 
 .doctor-specialty {
-  font-size: 0.85rem;
-  color: #0c0c0c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.84rem;
+  color: #4a5568;
   margin: 0;
-  opacity: 0.7;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
-.doctor-card.director-card .doctor-specialty {
+.doctor-bio {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #4a5568;
+  margin: 0.5rem 0 0.85rem;
+  text-align: center;
+  max-width: 32ch;
+}
+
+.doctor-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: #566583;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 0.15rem;
+  transition: background 0.2s ease;
+}
+
+.doctor-cta:hover {
+  background: #455470;
+}
+
+.placeholder-image {
+  color: #718096;
   font-size: 0.85rem;
 }
 
-/* Responsive - Solo mostrar carrusel en mobile */
 @media (min-width: 769px) {
   .staff-carousel {
     display: none;

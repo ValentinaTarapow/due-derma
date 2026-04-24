@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
 import logoImage from '../assets/logo.png';
-import colors from '../utils/colors';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

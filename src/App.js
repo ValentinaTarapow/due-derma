@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import StaffCarousel from './components/StaffCarousel';
+import { DirectorArchDecorations } from './components/DirectorArchDecorations';
 import Footer from './components/Footer';
 import danielaImage from './assets/daniela-nueva.jpeg';
 import agustinaImage from './assets/agustina-fernandez-capiet.jpeg';
@@ -87,67 +88,91 @@ function App() {
 
         <section id="team" className="section section-3">
           <div className="team-content">
-            {/* Carrusel para mobile */}
-            <StaffCarousel />
-            
-            {/* Grid para desktop - Equipo Médico */}
+            <StaffCarousel yearsOfExperience={yearsOfExperience} />
             <div className="staff-section">
-              <h1 className="main-team-title">Nuestro Equipo Médico</h1>
-              <p className="team-subtitle">Profesionales comprometidos con tu bienestar</p>
-              
-              {/* Grid de cards del equipo */}
-              <div className="team-grid">
-                <div className="staff-card director-card">
-                  <div className="staff-card-image director-image">
-                    <img src={danielaImage} alt="Dra. Daniela Maleh" />
-                  </div>
-                  <div className="staff-card-info">
-                    <h3 className="staff-card-name">Dra. Daniela Maleh</h3>
-                    <p className="staff-card-title">Directora Médica</p>
-                    <p className="staff-card-specialty">Dermatóloga (M.N 143.541)</p>
-                    <a 
-                      href="https://danielamaleh.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="staff-card-link"
-                    >
-                      Ver perfil completo <i className="fas fa-arrow-right"></i>
-                    </a>
+              <header className="team-page-header">
+                <h1 className="main-team-title">Nuestro Equipo Médico</h1>
+                <div className="team-header-divider" aria-hidden="true">
+                  <span className="team-header-divider-line team-header-divider-line--left" />
+                  <span className="team-header-divider-dot" />
+                  <span className="team-header-divider-line team-header-divider-line--right" />
+                </div>
+                <p className="team-subtitle">Profesionales comprometidos con tu bienestar</p>
+              </header>
+
+              <p className="team-section-label">Directora</p>
+
+              <article className="team-feature">
+                <div className="team-feature-photo">
+                  <div className="director-frame">
+                    <img
+                      src={danielaImage}
+                      alt="Dra. Daniela Maleh"
+                      className="director-frame__img"
+                    />
+                    <div className="director-frame-decorations">
+                      <DirectorArchDecorations />
+                    </div>
                   </div>
                 </div>
+                <div className="team-feature-body">
+                  <h2 className="team-feature-name">Dra. Daniela Maleh</h2>
+                  <p className="team-feature-role">Directora médica</p>
+                  <p className="team-feature-specialty">Dermatóloga (M.N. 143.541)</p>
+                  <span className="team-feature-divider" aria-hidden="true" />
+                  <p className="team-feature-bio">
+                    Especialista en dermatología clínica y estética. Más de {yearsOfExperience} años de
+                    experiencia en tratamientos personalizados y medicina inyectable.
+                  </p>
+                  <a
+                    href="https://danielamaleh.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="team-feature-cta"
+                  >
+                    Ver perfil completo <i className="fas fa-arrow-right" aria-hidden="true" />
+                  </a>
+                </div>
+              </article>
 
-                <div className="staff-card">
+              <p className="team-section-label">Equipo</p>
+
+              <div className="team-grid team-grid-members">
+                <article className="staff-card staff-card-member">
                   <div className="staff-card-image">
                     <img src={agustinaImage} alt="Dra. Agustina Fernández Capiet" />
                   </div>
                   <div className="staff-card-info">
                     <h3 className="staff-card-name">Dra. Agustina Fernández Capiet</h3>
-                    <p className="staff-card-title">Coordinadora Médica</p>
-                    <p className="staff-card-specialty">Dermatóloga (M.N. 176.752)</p>
+                    <p className="staff-card-role">Coordinadora médica</p>
+                    <span className="staff-card-divider" aria-hidden="true" />
+                    <p className="staff-card-meta">Dermatóloga (M.N. 176.752)</p>
                   </div>
-                </div>
-                
-                <div className="staff-card">
+                </article>
+
+                <article className="staff-card staff-card-member">
                   <div className="staff-card-image">
                     <img src={ludmilaImage} alt="Dra. Ludmila Rodríguez" />
                   </div>
                   <div className="staff-card-info">
                     <h3 className="staff-card-name">Dra. Ludmila Rodríguez</h3>
-                    <p className="staff-card-title" style={{ visibility: 'hidden' }}>Coordinadora Médica</p>
-                    <p className="staff-card-specialty">Dermatóloga (M.N. 144.952)</p>
+                    <p className="staff-card-role">Dermatóloga</p>
+                    <span className="staff-card-divider" aria-hidden="true" />
+                    <p className="staff-card-meta">Dermatóloga (M.N. 144.952)</p>
                   </div>
-                </div>
-                
-                <div className="staff-card">
+                </article>
+
+                <article className="staff-card staff-card-member">
                   <div className="staff-card-image">
                     <img src={malenaImage} alt="Dra. Malena Colasanti" />
                   </div>
                   <div className="staff-card-info">
                     <h3 className="staff-card-name">Dra. Malena Colasanti</h3>
-                    <p className="staff-card-title" style={{ visibility: 'hidden' }}>Coordinadora Médica</p>
-                    <p className="staff-card-specialty">Dermatóloga (M.N. 145.893)</p>
+                    <p className="staff-card-role">Dermatóloga</p>
+                    <span className="staff-card-divider" aria-hidden="true" />
+                    <p className="staff-card-meta">Dermatóloga (M.N. 145.893)</p>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>
