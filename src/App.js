@@ -274,9 +274,15 @@ function App() {
                     title="Ubicación Due Derma"
                   ></iframe>
                 </div>
-                <div className="map-overlay">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Due%20Derma%20Gallo%201671%2C%20Buenos%20Aires%2C%20Argentina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-overlay"
+                  aria-label="Abrir ubicación en Google Maps"
+                >
                   <span>Abrir mapa</span>
-                </div>
+                </a>
               </div>
             </div>
           </div>
