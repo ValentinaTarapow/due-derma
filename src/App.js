@@ -33,7 +33,18 @@ function App() {
           <div className="section-content hero-content">
             <h1>Due Derma</h1>
             <p className="hero-subtitle">Dermatología Clínica & Estética</p>
-            <p className="hero-tagline">Más de {yearsOfExperience} años de trayectoria</p>
+            <p className="hero-tagline">
+              Más de {yearsOfExperience} años de trayectoria ·{' '}
+              Fundado por la{' '}
+              <a
+                href="https://danielamaleh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="founder-link"
+              >
+                <strong>Dra Daniela Maleh</strong>
+              </a>
+            </p>
           </div>
         </section>
         
