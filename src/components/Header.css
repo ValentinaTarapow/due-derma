@@ -64,8 +64,15 @@
 }
 
 .nav-link:hover {
-  color: #9299a1;
-  background-color: rgba(146, 153, 161, 0.1);
+  color: #0c0c0c;
+  background-color: rgba(188, 206, 237, 0.55);
+}
+
+.nav-link:focus-visible {
+  color: #0c0c0c;
+  background-color: rgba(188, 206, 237, 0.55);
+  outline: 2px solid #5e6f8e;
+  outline-offset: 2px;
 }
 
 /* Botón hamburguesa */
@@ -151,8 +158,15 @@
 }
 
 .nav-mobile-link:hover {
-  color: #9299a1;
-  background-color: rgba(146, 153, 161, 0.1);
+  color: #0c0c0c;
+  background-color: rgba(188, 206, 237, 0.55);
+}
+
+.nav-mobile-link:focus-visible {
+  color: #0c0c0c;
+  background-color: rgba(188, 206, 237, 0.55);
+  outline: 2px solid #5e6f8e;
+  outline-offset: 2px;
 }
 
 /* Responsive design */
