@@ -3,6 +3,7 @@ import Header from './components/Header';
 import StaffCarousel from './components/StaffCarousel';
 import { DirectorArchDecorations } from './components/DirectorArchDecorations';
 import Footer from './components/Footer';
+import aboutClinicImage from './assets/recepcion-mejorada.png';
 import danielaImage from './assets/daniela-nueva.jpeg';
 import agustinaImage from './assets/agustina-fernandez-capiet.jpeg';
 import ludmilaImage from './assets/ludmila-rodriguez.jpeg';
@@ -40,55 +41,75 @@ function App() {
           <div className="section-bg" aria-hidden="true" />
           <div className="section-content section-content--about">
             <h1 className="section-title">Sobre Due Derma</h1>
-            <div className="about-intro">
-              <p>
-                Due Derma es un centro especializado en dermatología clínica y estética médica, fundado
-                por la{' '}
-                <a
-                  href="https://danielamaleh.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="founder-link"
-                >
-                  Dra. Daniela Maleh
-                </a>
-                .
-              </p>
-              <p>
-                Brindamos una atención personalizada, donde la calidad médica se combina con la
-                calidez humana que cada paciente merece. Trabajamos con tecnología actualizada y
-                tratamientos innovadores, en un entorno cómodo y seguro.
-              </p>
-              <p>
-                Para nosotros, el cuidado de la piel es mucho más que estética:{' '}
-                <span className="about-intro-highlight">es salud, bienestar y confianza</span>.
-              </p>
-            </div>
 
-            <div className="about-why-box" aria-labelledby="about-why-heading">
-              <h2 id="about-why-heading" className="about-why-box__title">
-                ¿Por qué elegirnos?
-              </h2>
-              <ul className="about-why-list">
-                <li>
-                  <span className="about-why-list__item-title">Atención personalizada</span>
+            <div className="about-cards-grid">
+              <div className="about-card about-card--intro">
+                <div className="about-intro">
+                  <h2 className="about-intro__title" id="about-intro-heading">
+                    ¿Quiénes somos?
+                  </h2>
                   <p>
-                    Nos enfocamos en entender cada caso y acompañarte según tus necesidades.
+                    Due Derma es un centro especializado en dermatología clínica y estética médica, fundado
+                    por la{' '}
+                    <a
+                      href="https://danielamaleh.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="founder-link"
+                    >
+                      Dra. Daniela Maleh
+                    </a>
+                    .
                   </p>
-                </li>
-                <li>
-                  <span className="about-why-list__item-title">Profesionales en formación constante</span>
-                  <p>Trabajamos con técnicas actualizadas y respaldo médico.</p>
-                </li>
-                <li>
-                  <span className="about-why-list__item-title">Experiencia integral</span>
-                  <p>Desde la consulta inicial hasta el seguimiento post tratamiento.</p>
-                </li>
-                <li>
-                  <span className="about-why-list__item-title">Entorno cuidado</span>
-                  <p>Un espacio cálido, seguro y pensado para tu comodidad.</p>
-                </li>
-              </ul>
+                  <p>
+                    Brindamos una atención personalizada, donde la calidad médica se combina con la
+                    calidez humana que cada paciente merece. Trabajamos con tecnología actualizada y
+                    tratamientos innovadores, en un entorno cómodo y seguro.
+                  </p>
+                  <p>
+                    Para nosotros, el cuidado de la piel es mucho más que estética:{' '}
+                    <span className="about-intro-highlight">es salud, bienestar y confianza</span>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about-card about-card--image">
+                <figure className="about-card-figure">
+                  <img
+                    src={aboutClinicImage}
+                    alt="Logo Due Derma — dermatología clínica y estética"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+
+              <div className="about-card about-card--why">
+                <div className="about-why-box" aria-labelledby="about-why-heading">
+                  <h2 id="about-why-heading" className="about-why-box__title">
+                    ¿Por qué elegirnos?
+                  </h2>
+                  <ul className="about-why-list">
+                    <li>
+                      <span className="about-why-list__item-title">Atención personalizada</span>
+                      <p>
+                        Nos enfocamos en entender cada caso y acompañarte según tus necesidades.
+                      </p>
+                    </li>
+                    <li>
+                      <span className="about-why-list__item-title">Profesionales en formación constante</span>
+                      <p>Trabajamos con técnicas actualizadas y respaldo médico.</p>
+                    </li>
+                    <li>
+                      <span className="about-why-list__item-title">Experiencia integral</span>
+                      <p>Desde la consulta inicial hasta el seguimiento post tratamiento.</p>
+                    </li>
+                    <li>
+                      <span className="about-why-list__item-title">Entorno cuidado</span>
+                      <p>Un espacio cálido, seguro y pensado para tu comodidad.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <a href="#contact" className="team-feature-cta about-cta--centered">
