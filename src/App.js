@@ -276,7 +276,7 @@ function App() {
       <Footer />
 
       {/* Botón flotante de WhatsApp */}
-      <a href="https://api.whatsapp.com/send?phone=5491131420521&text=Hola%20Due%20Derma,%20quisiera%20recibir%20más%20información%20sobre..." 
+      <a href="https://api.whatsapp.com/send?phone=5491150535098&text=Hola%20Due%20Derma,%20quisiera%20recibir%20más%20información%20sobre..." 
          target="_blank" 
          rel="noopener noreferrer" 
          className="whatsapp-float">
