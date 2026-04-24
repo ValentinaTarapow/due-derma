@@ -112,7 +112,7 @@ function App() {
               </div>
             </div>
 
-            <a href="#contact" className="team-feature-cta about-cta--centered">
+            <a href="#location" className="team-feature-cta about-cta--centered">
               Vení a conocernos <i className="fas fa-arrow-right" aria-hidden="true" />
             </a>
           </div>
@@ -246,7 +246,7 @@ function App() {
 
         <section id="location" className="section section-5">
           <div className="section-content location-content">
-            <h1>Cómo Llegar</h1>
+            <h1>¿Cómo llegar?</h1>
             <div className="location-wrapper">
               <div className="location-info">
                 {/* Tarjeta principal de ubicación */}
