@@ -37,52 +37,63 @@ function App() {
         </section>
         
         <section id="about" className="section section-2">
-          <div className="section-content">
-            <h1>Quiénes Somos</h1>
-            {/* Versión completa para desktop */}
-            <div className="about-text-desktop">
+          <div className="section-bg" aria-hidden="true" />
+          <div className="section-content section-content--about">
+            <h1 className="section-title">Sobre Due Derma</h1>
+            <div className="about-intro">
               <p>
-                Due Derma es un centro especializado en dermatología clínica y estética médica, 
-                fundado por la{' '}
-                <a 
-                  href="https://danielamaleh.com" 
-                  target="_blank" 
+                Due Derma es un centro especializado en dermatología clínica y estética médica, fundado
+                por la{' '}
+                <a
+                  href="https://danielamaleh.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="founder-link"
                 >
                   Dra. Daniela Maleh
-                </a>.
+                </a>
+                .
               </p>
               <p>
-                Brindamos atención personalizada y de excelencia, donde la calidad médica 
-                se combina con la calidez humana que cada paciente merece.
+                Brindamos una atención personalizada, donde la calidad médica se combina con la
+                calidez humana que cada paciente merece. Trabajamos con tecnología actualizada y
+                tratamientos innovadores, en un entorno cómodo y seguro.
               </p>
               <p>
-                Utilizamos tecnología de vanguardia y tratamientos innovadores en un ambiente 
-                cómodo y seguro. Para nosotros, el cuidado de la piel es mucho más que estética: 
-                es salud, bienestar y confianza.
+                Para nosotros, el cuidado de la piel es mucho más que estética:{' '}
+                <span className="about-intro-highlight">es salud, bienestar y confianza</span>.
               </p>
             </div>
-            {/* Versión resumida para mobile */}
-            <div className="about-text-mobile">
-              <p>
-                Due Derma es un centro de dermatología clínica y estética médica, 
-                fundado por la{' '}
-                <a 
-                  href="https://danielamaleh.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="founder-link"
-                >
-                  Dra. Daniela Maleh
-                </a>. 
-                Brindamos atención personalizada con calidad médica y calidez humana.
-              </p>
-              <p>
-                Utilizamos tecnología de vanguardia en un ambiente seguro. 
-                El cuidado de la piel es salud, bienestar y confianza.
-              </p>
+
+            <div className="about-why-box" aria-labelledby="about-why-heading">
+              <h2 id="about-why-heading" className="about-why-box__title">
+                ¿Por qué elegirnos?
+              </h2>
+              <ul className="about-why-list">
+                <li>
+                  <span className="about-why-list__item-title">Atención personalizada</span>
+                  <p>
+                    Nos enfocamos en entender cada caso y acompañarte según tus necesidades.
+                  </p>
+                </li>
+                <li>
+                  <span className="about-why-list__item-title">Profesionales en formación constante</span>
+                  <p>Trabajamos con técnicas actualizadas y respaldo médico.</p>
+                </li>
+                <li>
+                  <span className="about-why-list__item-title">Experiencia integral</span>
+                  <p>Desde la consulta inicial hasta el seguimiento post tratamiento.</p>
+                </li>
+                <li>
+                  <span className="about-why-list__item-title">Entorno cuidado</span>
+                  <p>Un espacio cálido, seguro y pensado para tu comodidad.</p>
+                </li>
+              </ul>
             </div>
+
+            <a href="#contact" className="team-feature-cta about-cta--centered">
+              Vení a conocernos <i className="fas fa-arrow-right" aria-hidden="true" />
+            </a>
           </div>
         </section>
 

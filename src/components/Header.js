@@ -47,7 +47,7 @@ const Header = () => {
                 className="nav-link" 
                 onClick={() => scrollToSection('about')}
               >
-                Quiénes Somos
+                Sobre Due Derma
               </button>
             </li>
             <li>
@@ -113,7 +113,7 @@ const Header = () => {
               className="nav-mobile-link" 
               onClick={() => scrollToSection('about')}
             >
-              Quiénes Somos
+              Sobre Due Derma
             </button>
           </li>
           <li>
